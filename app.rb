@@ -27,5 +27,5 @@ get '/fruit2' do
 end
 
 get '/cat' do
- "<img style='border: 2px dashed #f00;' src='http://bit.ly/1eze8aE'>"
+  erb(:index)
 end
