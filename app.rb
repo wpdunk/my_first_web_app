@@ -10,23 +10,14 @@ get '/secret' do
   "don't look, this is secret"
 end
 
-get '/name' do
-  "will"
+get '/random_cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
 end
 
-get '/bikes' do
-  "r cool"
-end
-
-get '/fruit' do
-  "apples"
-end
-
-get '/fruit2' do
-  "bananas"
-end
-
-get '/cat' do
-  @random_name = ["Amigo", "Oscar", "Viking"].sample
+get '/named_cat' do
+  p params
+  @name = params[:name]
+  @age = params[:age]
   erb(:index)
 end
