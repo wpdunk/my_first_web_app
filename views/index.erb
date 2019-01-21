@@ -1,2 +1,13 @@
+<% if @name %>
 <h1>My name is <%= @name %> and I'm <%= @age %></h1>
+<% end %>
+
+<form action="/named_cat">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="SUBMIT">
+  </div>
+</form>
+
 <img style='border: 2px dashed #f00;' src='http://bit.ly/1eze8aE'>
